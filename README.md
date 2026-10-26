@@ -30,9 +30,22 @@ The online service that runs the lobbies and the relays is not public.
 
 ## Building
 
-Each repository's README lists its requirements, with versions, and how to build and test it. Clone with
-`--recurse-submodules`. The runner and the launcher are built side by side: clone piconet-runner and
-piconet-launcher into the same folder.
+Each repository's README lists its requirements, each with its install command, and how to build and check it.
+Clone with git inside WSL (or on Linux), not Git for Windows, whose `core.autocrlf` would break the `.sh` files.
+
+The runner and the launcher are built side by side: clone piconet-runner and piconet-launcher into the same folder.
+The runner's Windows build needs its work folder on a Windows drive (no spaces in its path). The clone can be in
+WSL's own file system, with the work folder on a Windows drive (preferred), or on a Windows drive itself; under
+`/mnt/<drive>` git is much slower (a `--recurse-submodules` clone took about 24 minutes there, against 6). The
+runner's clone needs its own submodules but not theirs (its setup fetches what the build needs):
+
+    git clone https://github.com/piconet-live/piconet-runner.git
+    git -C piconet-runner submodule update --init
+    git clone --recurse-submodules https://github.com/piconet-live/piconet-launcher.git
+
+The runner's clone is about 1.1 GB and its work folder about 5 GB; plan for about 25 GB in all. A first build takes
+about 40 minutes (the module about 12, the runner about 10). The steps are in
+[piconet-runner's README](https://github.com/piconet-live/piconet-runner#building).
 
 ## Contributing
 
