@@ -41,7 +41,8 @@ runner's clone needs its own submodules but not theirs (its setup fetches what t
 
     git clone https://github.com/piconet-live/piconet-runner.git
     git -C piconet-runner submodule update --init
-    git clone --recurse-submodules https://github.com/piconet-live/piconet-launcher.git
+    git clone https://github.com/piconet-live/piconet-launcher.git
+    git -C piconet-launcher submodule update --init
 
 The runner's clone is about 1.1 GB and its work folder about 5 GB; plan for about 25 GB in all. A first build takes
 about 40 minutes (the module about 12, the runner about 10). The steps are in
