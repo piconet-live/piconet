@@ -4,8 +4,8 @@ This repository is the project's front page; the code is in the repositories its
 
 ## Building
 
-The [README](README.md) lists the requirements, with versions, and how to build and check this repository. Clone it
-with `--recurse-submodules`. Each part's repository has its own README and checks.
+This repository has nothing to build. The [README](README.md) points to the parts' repositories, each with its own
+requirements and checks.
 
 ## Making a change
 
