@@ -12,6 +12,8 @@ To play, download the launcher from [piconet.live](https://piconet.live) or from
 
 <!-- Screenshot: the launcher, added later. -->
 
+What is planned next, and after that, is in the [roadmap](ROADMAP.md).
+
 No game data is in any of these repositories. You need your own copy of F-Zero GX (USA) for the GameCube.
 
 ## The parts
